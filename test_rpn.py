@@ -23,10 +23,6 @@ class TestBasics(unittest.TestCase):
         result = rpn.calculate('12 3 /')
         self.assertEqual(4, result)
 
-    def test_pow(self):
-        result = rpn.calculate('2 2 **')
-        self.assertEqual(4, result)
-
     def test_badinput(self):
         with self.assertRaises(TypeError):
             rpn.calculate('1 2 3 +')
